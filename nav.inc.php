@@ -5,12 +5,12 @@ require_once("bootstrap.php");
 <nav>
     <ul class="navFlex">
         <li><a href="index.php" class="navLink">Home</a></li>
-        <li><a href="#" class="navLink">Profiel</a></li>
+        <li><a href="profile.php" class="navLink">Profiel</a></li>
         <li><a href="#" class="navLink">Vrienden</a></li>
         <li><a href="#" class="navLink">Spreek af</a></li>
         <li><a href="#" class="navLink">Map</a></li>
         <li><a href="#" class="navLink">Chat</a></li>
         <li><a href="#" class="navLink">Beoordeel</a></li>
-        <li><a href="#" class="navLink">Log uit</a></li>
+        <li><a href="<?php session_abort(); ?>" class="navLink">Log uit</a></li>
     </ul>
 </nav>
