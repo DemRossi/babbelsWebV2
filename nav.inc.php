@@ -11,6 +11,6 @@ require_once("bootstrap.php");
         <li><a href="#" class="navLink">Map</a></li>
         <li><a href="#" class="navLink">Chat</a></li>
         <li><a href="#" class="navLink">Beoordeel</a></li>
-        <li><a href="<?php session_abort(); ?>" class="navLink">Log uit</a></li>
+        <li><a href="logout.php" class="navLink">Log uit</a></li>
     </ul>
 </nav>

@@ -4,10 +4,11 @@
     //$userName = $_SESSION['UserName'];
     if( isset($_SESSION['User']) ){
         //logged in user
-        //echo "😎";
+        echo "😎";
     }else{
         //no logged in user
-        header('Location: login.php');
+        echo "nope";
+        //header('Location: login.php');
     }
 ?><!DOCTYPE html>
 <html lang="en">
