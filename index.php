@@ -4,7 +4,7 @@
     //$userName = $_SESSION['UserName'];
     if( isset($_SESSION['User']) ){
         //logged in user
-        echo "😎";
+        //echo "😎";
     }else{
         //no logged in user
         header('Location: login.php');
@@ -17,11 +17,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Babbels - Home</title>
     <link rel="stylesheet" href="dist/css/app.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <?php require_once("nav.inc.php"); ?>
     </header>
+    <div class="container">
+        <div class="cards">
+            <h2 class="title title--cards">Spelen in het park</h2>
+            <div class="cardCat"></div>
+            <div class="btnWrapper">
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+    </div>
     
 
 </body>
