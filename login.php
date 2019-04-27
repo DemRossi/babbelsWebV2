@@ -4,10 +4,10 @@ require_once("bootstrap.php");
 
 if(!empty($_POST)){
     $conn = Db::getInstance();
-    $username = htmlspecialchars($_POST['username']);
+    $username = htmlspecialchars($_POST['email']);
     $password = $_POST['password'];
 
-    $statement = $conn->prepare("select * from users where username = :username");
+    $statement = $conn->prepare("select * from users where email = :username");
     $statement->bindParam(":username", $username);
     $statement->execute();
     $user = $statement->fetch(PDO::FETCH_ASSOC);
@@ -17,7 +17,6 @@ if(!empty($_POST)){
         //setcookie("loggedin", $user['password'], time() +60*60*24*30);
         session_start();
         $_SESSION['User'] = true;
-        $_SESSION['UserName'] = $username;
         $_SESSION['Id'] = $user['id'];
         header('Location: index.php');
 	} else{
@@ -33,8 +32,6 @@ if(!empty($_POST)){
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/login.css">
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
 </head>
 <body>
 	<div class="form-modal">
@@ -79,10 +76,6 @@ if(!empty($_POST)){
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/login.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
-	<script>
-		
-	</script>
+
 </body>
 </html>
