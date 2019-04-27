@@ -75,11 +75,6 @@ if(!empty($_POST)){
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/login.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
-	<script src="dist/js/main.js"></script>
 	
 	<script>
 		
