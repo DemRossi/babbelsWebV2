@@ -27,9 +27,10 @@
         <div class="cards">
             <h2 class="title title--cards">Spelen in het park</h2>
             <div class="cardCat"></div>
+            <div class="timer"><span class="textTime">15:00</span></div>
             <div class="btnWrapper">
-                <button></button>
-                <button></button>
+                <button class="knop knop--go"></button>
+                <button class="knop knop--nogo"></button>
             </div>
         </div>
     </div>

@@ -13,8 +13,10 @@ header{
 div.logo{
   width: 100px;
   height: 60px;
-  background-image: url('https://fakeimg.pl/100x60/');
-  margin-left: 20px;
+  background-image: url('../../images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 50px;
   margin-top: 6px;
 }
 nav{
