@@ -1,0 +1,38 @@
+section{
+    padding-top: 100px;
+    height: 97vh;
+}
+section nav{
+    width: 100%;
+}
+section nav ul li{
+    display: inline;
+    float: right;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+  }
+  .box {
+    width: 50%;
+    margin: 10px;
+  }
+.navlink__img{
+    width: 40px;
+    margin-right: 20px;
+}
+.profile__pic img{
+    width: 150px;
+}
+.profile__pic--center{
+    text-align: center;
+}
+.profile__pic{
+    justify-content: flex-end;
+      display: grid;
+}
+.form{
+    width: 45%;
+    display: inline-block;
+}
