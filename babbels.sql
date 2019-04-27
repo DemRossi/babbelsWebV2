@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 27 apr 2019 om 06:45
+-- Gegenereerd op: 27 apr 2019 om 07:01
 -- Serverversie: 10.1.38-MariaDB
 -- PHP-versie: 7.3.2
 
@@ -21,6 +21,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `babbels`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `timestamp_start` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `timestamp_end` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `description` varchar(255) NOT NULL,
+  `price` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -48,6 +63,12 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES
 --
 
 --
+-- Indexen voor tabel `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexen voor tabel `users`
 --
 ALTER TABLE `users`
@@ -56,6 +77,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
+
+--
+-- AUTO_INCREMENT voor een tabel `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT voor een tabel `users`
